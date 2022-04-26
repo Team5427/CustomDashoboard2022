@@ -54,6 +54,18 @@ body > * {
     /* overflow: scroll; */
     /* background: #222; */
 }
+#x-axis {
+    font-size: 28px;
+    letter-spacing: -1px;
+}
+#y-axis {
+    font-size: 28px;
+    letter-spacing: -1px;
+}
+#z-axis {
+    font-size: 28px;
+    letter-spacing: -1px;
+}
 #timer {
     font-family: monospace;
     display: block;

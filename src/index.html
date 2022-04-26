@@ -13,13 +13,18 @@
     </style>
 </head>
 
-<body onmousemove="showCoords(event)" onmouseout="clearCoor()" onkeypress="endLock()" id="body">
+<body>
     <img src="../images/chicken.jpeg" alt="bruh" class="img-fluid">
     <div class="container-fluid">
         <div class="row mt-3">
           <div class="col-3">
             <div class="card">
                 <div class="card-body" id="demo">
+                  <div id="drive-input">
+                    <p id="x-axis">X-Axis : 0</p>
+                    <p id="y-axis">Y-Axis : 0</p>
+                    <p id="z-axis">Z-Axis : 0</p>
+                  </div>
                 </div>
                 <button onClick = "startLock()">
                     click here
