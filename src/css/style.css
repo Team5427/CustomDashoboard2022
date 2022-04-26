@@ -77,8 +77,8 @@ body > * {
 }
 
 #drive-input{
-    align-self: center;
-    font-size: medium;
+    /* align-self: center; */
+    /* font-size: medium; */
 }
 #timer {
     font-family: monospace;
