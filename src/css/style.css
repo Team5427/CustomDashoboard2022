@@ -7,15 +7,20 @@
     display: none;
 }
 body {
-    font: 16px sans-serif;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    color: white;
-    overflow: hidden;
-    background: #222;
+    color: red;
+    overflow: visible;
+    /* background: #222; */
 }
+
+p {
+    font-size: 5px;
+    color: rgb(0, 194, 253);
+}
+
 button, input[type="text"], input[type="number"], .select-container, select {
     color: white;
     background: #444;
@@ -44,10 +49,10 @@ input[type="checkbox"] {
 }
 /* Major interface panes, aside, article, header, etc. */
 body > * {
-    padding: 10px;
+    padding: 0px;
     position: fixed;
-    overflow: scroll;
-    background: #222;
+    /* overflow: scroll; */
+    /* background: #222; */
 }
 #timer {
     font-family: monospace;
@@ -115,8 +120,8 @@ text {
 }
 #robot-diagram {
     position: absolute;
-    bottom: 1px;
-    right: 1vw;
+    bottom: 5px;
+    right: 2vw;
 }
 #robot-arm {
     -webkit-transform-origin: right;
