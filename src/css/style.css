@@ -16,9 +16,16 @@ body {
     /* background: #222; */
 }
 
+.card {
+    /* background-color: navy; */
+    color: navy;
+    /* accent-color: navy; */
+}
+
 p {
-    font-size: 5px;
-    color: rgb(0, 194, 253);
+    font-size: 120%;
+    color: white;
+    vertical-align: middle;
 }
 
 button, input[type="text"], input[type="number"], .select-container, select {
@@ -49,22 +56,29 @@ input[type="checkbox"] {
 }
 /* Major interface panes, aside, article, header, etc. */
 body > * {
-    padding: 0px;
+    min-height: 100%;
     position: fixed;
-    /* overflow: scroll; */
-    /* background: #222; */
+    overflow: scroll;
+    background: #222;
 }
+
+
 #x-axis {
-    font-size: 28px;
-    letter-spacing: -1px;
+    /* font-size: 28px; */
+    /* letter-spacing: -1px; */
 }
 #y-axis {
-    font-size: 28px;
-    letter-spacing: -1px;
+    /* font-size: 28px; */
+    /* letter-spacing: -1px; */
 }
 #z-axis {
-    font-size: 28px;
-    letter-spacing: -1px;
+    /* font-size: 28px; */
+    /* letter-spacing: -1px; */
+}
+
+#drive-input{
+    align-self: center;
+    font-size: medium;
 }
 #timer {
     font-family: monospace;

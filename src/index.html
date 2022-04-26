@@ -5,49 +5,52 @@
     <meta charset="utf-8">
     <title>FRC Dashboard</title>
     <link href="css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <style>
-            .newClass {
-                cursor: none;
-            }
+        .newClass {
+            cursor: none;
+        }
     </style>
 </head>
 
 <body>
-    <img src="../images/chicken.jpeg" alt="bruh" class="img-fluid">
+    <!-- <img src="../images/chicken.jpeg" alt="bruh" class="img-fluid"> -->
     <div class="container-fluid">
-        <div class="row mt-3">
-          <div class="col-3">
-            <div class="card">
-                <div class="card-body" id="demo">
-                  <div id="drive-input">
-                    <p id="x-axis">X-Axis : 0</p>
-                    <p id="y-axis">Y-Axis : 0</p>
-                    <p id="z-axis">Z-Axis : 0</p>
-                  </div>
+        <div class="row mt-3 row-col-4">
+            <div class="col-4">
+                <div class="card text-white border-primary bg-dark">
+                    <div class="card-body" id="demo">
+                        <div id="drive-input">
+                            <p id="x-axis">X-Axis : 0.00</p>
+                            <p id="y-axis">Y-Axis : 0.00</p>
+                            <p id="z-axis">Z-Axis : 0.00</p>
+                        </div>
+                    </div>
                 </div>
-                <button onClick = "startLock()">
-                    click here
+            </div>
+            <div class="col-3">
+                <div class="card text-white border-primary bg-dark">
+                    <div class="card-body">
+                        Press "click here" for shit to work
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card text-white border-primary bg-dark">
+                    <div class="card-body">
+                        press "esc" to exit
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <button type="button" class="btn btn-warning btn-lg btn-block" onclick="startLock()">
+                    Drive Mode
                 </button>
             </div>
-          </div>
-          <div class="col-3">
-            <div class="card">
-                <div class="card-body">
-                  Press "click here" for shit to work
-                </div>
-            </div>
-          </div>
-          <div class="col-3">
-            <div class="card">
-                <div class="card-body">
-                  press "esc" to exit
-                </div>
-            </div>
-          </div>
         </div>
-    </div>    
-    
+    </div>
+
     <script src="networktables/networktables.js"></script>
     <script src="ui.js"></script>
     <script src="connection.js"></script>
@@ -57,8 +60,12 @@
         webbitStore.addSourceProvider('NetworkTables');
         webbitStore.setDefaultSourceProvider('NetworkTables');
     </script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
     <script>
         function GFG_Fun() {
             body.classList.add("newClass");

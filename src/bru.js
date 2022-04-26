@@ -9,9 +9,10 @@ let back = false;
 let left = false;
 let right = false;
 let sprint = false;
-var x = 0;
-var y = 0;
-var z = 0;
+var x = 0.00;
+var y = 0.00;
+var z = 0.00;
+const kMouseDivisor = 60;
 
 onkeydown = key => {
   if (key.key == 'r') {
@@ -66,11 +67,11 @@ onkeyup = key => {
 };
 
 onmousemove = event => {
-  if (Math.abs(event.movementX) > 30){
+  if (Math.abs(event.movementX) > kMouseDivisor){
     z = Math.sign(event.movementX);
   }
   else{
-    z = event.movementX / 30;
+    z = event.movementX / kMouseDivisor;
   }
 
   updateJoy();
@@ -79,10 +80,10 @@ onmousemove = event => {
 function updateJoy() {
   x = 0;
   y = 0;
-  var speed = .5;
+  var speed = .50;
 
   if (sprint) {
-    speed = .7;
+    speed = .70;
   }
 
   if (forward && !back) {
