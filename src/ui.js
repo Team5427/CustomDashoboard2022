@@ -18,7 +18,9 @@ let ui = {
         readout: document.getElementById('example-readout').firstChild
     },
     autoSelect: document.getElementById('auto-select'),
-    armPosition: document.getElementById('arm-position')
+    armPosition: document.getElementById('arm-position'),
+    shooterRPM: document.getElementById('shooter-rpm'),
+    canShoot: document.getElementById('can-shoot')
 };
 
 // Key Listeners
@@ -52,10 +54,8 @@ NetworkTables.addKeyListener('/SmartDashboard/arm/encoder', (key, value) => {
 });
 
 // This button is just an example of triggering an event on the robot by clicking a button.
-NetworkTables.addKeyListener('/SmartDashboard/example_variable', (key, value) => {
-    // Set class active if value is true and unset it if it is false
-    ui.example.button.classList.toggle('active', value);
-    ui.example.readout.data = 'Value is ' + value;
+NetworkTables.addKeyListener('/SmartDashboard/x/Shooter RPM', (key, value) => {
+    ui.shooterRPM.textContent = value;
 });
 
 NetworkTables.addKeyListener('/robot/time', (key, value) => {
@@ -85,6 +85,14 @@ NetworkTables.addKeyListener('/SmartDashboard/autonomous/selected', (key, value)
     ui.autoSelect.value = value;
 });
 
+NetworkTables.addKeyListener('/SmartDashboard/CAN SHOOT???', (key, value) => {
+    if(value){
+        canShoot.className = "card text-white bg-success h-100";
+    } else{
+        canShoot.className = "card text-white bg-danger h-100";
+    }
+});
+
 // The rest of the doc is listeners for UI elements being clicked on
 ui.example.button.onclick = function() {
     // Set NetworkTables values to the opposite of whether button has active class.
@@ -101,6 +109,8 @@ ui.gyro.container.onclick = function() {
 ui.autoSelect.onchange = function() {
     NetworkTables.putValue('/SmartDashboard/autonomous/selected', this.value);
 };
+
+
 // Get value of arm height slider when it's adjusted
 ui.armPosition.oninput = function() {
     NetworkTables.putValue('/SmartDashboard/arm/encoder', parseInt(this.value));

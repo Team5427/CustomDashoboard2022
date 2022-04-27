@@ -50,19 +50,22 @@
             <div class="col-3">
                 <div class="card text-white border-primary bg-dark h-100">
                     <div class="card-body">
-                        Press "click here" for shit to work
+                        <p class="card-text">Shooter RPM</p>
+                        <p id="shooter-rpm" class="card-text">0.000</p>
                     </div>
                 </div>
             </div>
             <div class="col-3">
                 <div class="card text-white border-primary bg-dark h-100">
-                    <div class="card-body">
-                        press "esc" to exit
+                    <div class="select-container">
+                        <select id="auto-select">
+                            <option>Robot disconnected</option>
+                        </select>
                     </div>
                 </div>
             </div>
             <div class="col-2">
-               <div class="card border-warning text-center h-100">
+                <div class="card border-warning text-center h-100">
                     <button class="btn btn-dark btn-lg btn-block h-100 w-100 mx-0" onclick="startLock()">
                         Drive Mode
                     </button>
@@ -72,14 +75,29 @@
         <div class="row">
             <div class="col-7">
                 <div class="card text-white border-primary bg-dark">
-                    <img src="../images/images.png" alt="field gone?" height="100%" width="100%">             
+                    <img src="http://limelight-steelta.local:5800" alt="field gone?" height="100%" width="100%">             
                 </div>
             </div>
             <div class="col-5">
                 <div class="card text-white border-primary bg-dark">
-                    <img src="../images/2022-field.png" class="img-fluid" alt="field gone?">             
+                    <img src="../images/2022-field.png" class="img-fluid" alt="field gone?">
                 </div>
             </div>
+        </div>
+        <div class="row py-4">
+            <div class="col-2  offset-md-7">
+                <div id="can-shoot" class="card text-white text-center border-dark bg-danger h-100">
+                    <div class="card-body" id="demo">
+                        <div id="can-shoot">
+                            Can Shoot?
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="login">
+            <input id="connect-address" type="text" value="localhost" disabled>
+            <button id="connect" disabled>Connecting</button>
         </div>
     </div>
 

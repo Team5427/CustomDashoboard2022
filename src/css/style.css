@@ -35,6 +35,7 @@ button, input[type="text"], input[type="number"], .select-container, select {
     font-size: 14px;
     padding: 6px 8px;
     cursor: pointer;
+    height: 50px;
     outline: 0;
 }
 .select-container {
@@ -99,15 +100,14 @@ header {
 }
 #camera {
     padding: 0;
-    position: fixed;
-    bottom: 0;
+    top: 0;
     left: 0;
-    width: 50vw;
-    height: 80vh;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
     background-color: #333;
     /* You'll need to mess with this a bit to get your camera to work. Replace the url with a live-updating image feed from your camera. Using other camera streaming systems will require some tweaking. */
-    /*background-image: url('LINK TO CAMERA SOURCE HERE');*/
+    background-image: url(roborio-5427-frc.local:1181/?action=stream);
 }
 article {
     top: 0;
