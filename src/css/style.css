@@ -28,6 +28,12 @@ p {
     vertical-align: middle;
 }
 
+#droppy {
+    margin-top: 20px;
+}
+
+
+
 button, input[type="text"], input[type="number"] {
     color: white;
     background: #444;

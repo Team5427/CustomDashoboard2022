@@ -54,23 +54,30 @@
                 </div>
             </div>
             <div class="col-3">
-                <div class="card border-primary bg-dark align-items-center">
+                <div class="card border-primary bg-dark h-100">
                     <!-- <div class="select-container"> -->
                         <!-- <select id="auto-select">
                             <option>Robot disconnected</option>
                             <option>Robot Connected</option>
                         </select> -->
                     <!-- </div> -->
-                    <div class="card-body">
-                        <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                            Dropdown button
+                    <div class="row mx-2 px-0">
+                        <div class="col-6">
+                        <div class="dropdown" id="droppy">
+                            <button class="btn btn-secondary dropdown-toggle w-100" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            Shmexy Dropdown
                             </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" id="auto-select">
+                                <li><a class="dropdown-item">bruh</a></li>
+                                <li><a class="dropdown-item">LLL</a></li>
+                                <li><a class="dropdown-item">oof</a></li>
                             </ul>
+                        </div>
+                        </div>
+                        <div class="col-6">
+                            <button class="btn btn-outline-warning text-white w-100" onClick="printButton('urggg')" id="droppy">
+                                Other Button
+                            </button>
                         </div>
                     </div>
                 </div>

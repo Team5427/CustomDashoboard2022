@@ -109,6 +109,19 @@ function updateJoy() {
 
 }
 
+function printButton (value) {
+  var autoSelect = document.getElementById('auto-select');
+  while (autoSelect.firstChild) {
+    autoSelect.removeChild(autoSelect.firstChild);
+  }
+  // Make an option for each autonomous mode and put it in the selector
+  for (let i = 0; i < value.length; i++) {
+      var option = document.createElement('li');
+      option.appendChild(document.createTextNode(value));
+      autoSelect.appendChild(option);
+  }
+}
+
 document.body.requestPointerLock = document.body.requestPointerLock ||
   document.body.mozRequestPointerLock;
 
