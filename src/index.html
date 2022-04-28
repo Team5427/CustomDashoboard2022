@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>FRC Dashboard</title>
+    <title>5427 Steel Talons</title>
     <link href="css/style.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <style>
@@ -13,10 +13,60 @@
     </style>
 </head>
 
-<body>
+<body id="bod">
     <!-- <img src="../images/chicken.jpeg" alt="bruh" class="img-fluid"> -->
     <div class="container-fluid">
-        <div class="row row-col-4 py-4">
+        <div class="row mt-3">
+            <div class="col-1">
+                <div class="card text-white text-center border-primary bg-dark h-100">
+                    <div class="card-body" id="demo">
+                        <h1 id="timer" class="card-title" style="margin-top: 3px;">
+                            2:15
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="card text-white text-center border-warning h-100">
+                    <div class="card-body bg-success" id="demo">
+                        <h1 id="comms-check" class="card-title" style="margin-top: 3px;">
+                            COMMS
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="card text-white text-center border-warning h-100">
+                    <div class="card-body bg-success" id="demo">
+                        <h1 id="limelight-check" class="card-title" style="margin-top: 3px;">
+                            LIMEY
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card border-primary bg-dark h-100">
+                    <div class="row mx-2 px-0">
+                        <div class="col-6">
+                        <div class="dropdown" id="mardown">
+                            <button class="btn btn-secondary dropdown-toggle w-100" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            Shmexy Dropdown
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" id="auto-select">
+                                <li><a class="dropdown-item">bruh</a></li>
+                                <li><a class="dropdown-item">LLL</a></li>
+                                <li><a class="dropdown-item">oof</a></li>
+                            </ul>
+                        </div>
+                        </div>
+                        <div class="col-6">
+                            <button class="btn btn-dark border-warning text-white w-100" onclick="startLock()" id="mardown">
+                                Drive Button
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="col-4">
                 <div class="card-group">
                     <div class="card text-white text-center border-primary bg-dark h-100">
@@ -45,77 +95,84 @@
                     </div>
                 </div>
             </div>
-            <div class="col-3">
-                <div class="card text-white text-center border-primary bg-dark h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">Shooter RPM</h5>
-                        <p id="shooter-rpm" class="card-text">0.000</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="card border-primary bg-dark h-100">
-                    <!-- <div class="select-container"> -->
-                        <!-- <select id="auto-select">
-                            <option>Robot disconnected</option>
-                            <option>Robot Connected</option>
-                        </select> -->
-                    <!-- </div> -->
-                    <div class="row mx-2 px-0">
-                        <div class="col-6">
-                        <div class="dropdown" id="droppy">
-                            <button class="btn btn-secondary dropdown-toggle w-100" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                            Shmexy Dropdown
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" id="auto-select">
-                                <li><a class="dropdown-item">bruh</a></li>
-                                <li><a class="dropdown-item">LLL</a></li>
-                                <li><a class="dropdown-item">oof</a></li>
-                            </ul>
-                        </div>
-                        </div>
-                        <div class="col-6">
-                            <button class="btn btn-outline-warning text-white w-100" onClick="printButton('urggg')" id="droppy">
-                                Other Button
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-2">
-                <div class="card border-warning text-center h-100">
-                    <button class="btn btn-dark btn-lg btn-block h-100 w-100 mx-0" onclick="startLock()">
-                        Drive Mode
-                    </button>
-                </div>
-            </div>
         </div>
-        <div class="row">
-            <div class="col-7">
-                <div class="card text-white border-primary bg-dark">
+        <div class="row my-4">
+            <div class="col-4">
+                <div class="card text-white border-info bg-dark">
                     <img src="../images/images.png" alt="field gone?" height="100%" width="100%">             
                 </div>
-            </div>
-            <div class="col-5">
-                <div class="card text-white border-primary bg-dark">
-                    <img src="../images/2022-field.png" class="img-fluid" alt="field gone?">
+                <div class="card text-white text-center border-primary bg-dark my-4">
+                    <div class="card-body">
+                      <h3 class="card-title" style="display:inline;"><b>X</b> : 0.00</h3>
+                      <h3 class="card-title px-5" style="display:inline;"><b>Y</b> : 0.00</h3>
+                      <h3 class="card-title" style="display:inline;"><b>θ</b> : 0.00</h3>
+                    </div>
+                    <img src="../images/2022-field.png" class="card-img-bottom" alt="stoppedexisting" height="90%">
                 </div>
-                <div class="row py-4">
-                    <div class="col-4">
-                        <div id="can-shoot" class="card text-white text-center border-dark h-100">
-                            <div class="card-body bg-danger">
-                                <h3 id="can-shoot" class="card-title my-0">
-                                    Shoot Ready
-                                </h3>
+                <div class="card-group">
+                    <div class="card text-white text-center border-warning bg-danger h-100">
+                        <div class="card-body">
+                            <div id="can-shoot">
+                                <h5 class="card-title py-2" style="margin-top:7px"><b>SHOOT READY</b></h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card text-white text-center border-primary bg-dark h-100">
+                        <div class="card-body">
+                            <div id="pitch">
+                                <h5 class="card-title py-2" style="margin-top:7px"><b>RPM</b> : 0.00</h5>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div id="login">
-            <input id="connect-address" type="text" value="localhost" disabled>
-            <button id="connect" disabled>Connecting</button>
+            <div class="col-8">
+                <div class="card text-white border-primary bg-dark">
+                    <img src="../images/images.png" alt="field gone?" height="100%" width="100%">             
+                </div>
+                <div class="row my-4">
+                    <div class="col-3">
+                        <div class="card text-white text-center border-primary bg-dark h-100">
+                            <div class="card-body" id="">
+                                <div id="tobefilledout">
+                                    <h2 class="card-title">Pitch</h2>
+                                    <h5 id="" class="card-text">0.00</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card text-white text-center border-primary bg-dark h-100">
+                            <div class="card-body" id="">
+                                <div id="tobefilledout">
+                                    <h2 class="card-title">Balls</h2>
+                                    <h5 id="" class="card-text">0.00</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card text-white text-center border-primary bg-dark h-100">
+                            <div class="card-body" id="">
+                                <div id="tobefilledout">
+                                    <h2 class="card-title">Battery</h2>
+                                    <h5 id="" class="card-text">0.00 V</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card text-white text-center border-primary bg-dark h-100">
+                            <div class="card-body" id="">
+                                <div id="tobefilledout">
+                                    <h2 class="card-title">PC</h2>
+                                    <h5 id="" class="card-text">0.00 %</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 

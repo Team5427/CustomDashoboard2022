@@ -67,10 +67,10 @@ onkeyup = key => {
 };
 
 onmousemove = event => {
-  if (Math.abs(event.movementX) > kMouseDivisor){
+  if (Math.abs(event.movementX) > kMouseDivisor) {
     z = Math.sign(event.movementX);
   }
-  else{
+  else {
     z = event.movementX / kMouseDivisor;
   }
 
@@ -109,16 +109,16 @@ function updateJoy() {
 
 }
 
-function printButton (value) {
+function printButton(value) {
   var autoSelect = document.getElementById('auto-select');
   while (autoSelect.firstChild) {
     autoSelect.removeChild(autoSelect.firstChild);
   }
   // Make an option for each autonomous mode and put it in the selector
   for (let i = 0; i < value.length; i++) {
-      var option = document.createElement('li');
-      option.appendChild(document.createTextNode(value));
-      autoSelect.appendChild(option);
+    var option = document.createElement('li');
+    option.appendChild(document.createTextNode(value));
+    autoSelect.appendChild(option);
   }
 }
 
@@ -131,10 +131,12 @@ document.exitPointerLock = document.exitPointerLock ||
 
 function startLock() {
   document.body.requestPointerLock();
+  document.getElementsByTagName().style.background = "#181818";
 }
 
 function endLock(event) {
-    document.exitPointerLock();
+  document.exitPointerLock();
+  document.getElementsByTagName().style.background = "#2c2c2c";
 
 }
 
