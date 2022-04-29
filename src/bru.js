@@ -99,9 +99,9 @@ function updateJoy() {
     x = speed;
   }
 
-  driveInput.xAxis.textContent = "X-Input: " + x.toFixed(2);
-  driveInput.yAxis.textContent = "Y-Input: " + y.toFixed(2);
-  driveInput.zAxis.textContent = "Z-Input: " + z.toFixed(2);
+  driveInput.xAxis.textContent = x.toFixed(2);
+  driveInput.yAxis.textContent = y.toFixed(2);
+  driveInput.zAxis.textContent = z.toFixed(2);
 
   NetworkTables.putValue('/SmartDashboard/x', x);
   NetworkTables.putValue('/SmartDashboard/y', y);
