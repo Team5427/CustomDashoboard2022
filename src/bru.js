@@ -103,9 +103,9 @@ function updateJoy() {
   driveInput.yAxis.textContent = y.toFixed(2);
   driveInput.zAxis.textContent = z.toFixed(2);
 
-  NetworkTables.putValue('/SmartDashboard/x', x);
-  NetworkTables.putValue('/SmartDashboard/y', y);
-  NetworkTables.putValue('/SmartDashboard/z', z);
+  NetworkTables.putValue('/SmartDashboard/drive/x', x);
+  NetworkTables.putValue('/SmartDashboard/drive/y', y);
+  NetworkTables.putValue('/SmartDashboard/drive/z', z);
 
 }
 

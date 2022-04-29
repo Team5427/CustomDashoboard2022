@@ -2,7 +2,7 @@ let ipc = require('electron').ipcRenderer;
 
 var NetworkTables =
     (() => {
-        let keys = {}, connectionListeners = [], connected = false, globalListeners = [], keyListeners = {}, robotAddress = '10.54.27.2';
+        let keys = {}, connectionListeners = [], connected = false, globalListeners = [], keyListeners = {}, robotAddress = 'localhost';
         ipc.send('ready');
         ipc.on('connected', (ev, con) => {
             connected = con;

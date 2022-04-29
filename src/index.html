@@ -16,40 +16,31 @@
 <body id="bod">
     <!-- <img src="../images/chicken.jpeg" alt="bruh" class="img-fluid"> -->
     <div class="container-fluid">
-        <div class="row mt-3">
-            <div class="col-1">
-                <div class="card text-white text-center border-primary bg-dark h-100">
-                    <div class="card-body" id="demo">
-                        <h1 id="timer" class="card-title">
-                            2:15
-                        </h1>
+        <div class="row mt-2">
+            <div class="col-2">
+                <div class="card text-white text-center border-primary bg-dark h-50">
+                    <div class="card-body-1 mt-0" id="demo">
+                        <button id="connect" class="btn btn-dark btn-lg btn-block w-100 mx-0 h-100" style="font-size: 100%;">
+                            Connect
+                        </button>
                     </div>
                 </div>
             </div>
             <div class="col-2">
-                <div class="card text-white text-center border-warning h-100">
-                    <div class="card-body bg-success" id="demo">
-                        <h1 id="comms-check" class="card-title">
-                            COMMS
-                        </h1>
-                    </div>
-                </div>
-            </div>
-            <div class="col-2">
-                <div class="card text-white text-center border-warning h-100">
-                    <div class="card-body bg-success" id="demo">
-                        <h1 id="limelight-check" class="card-title">
+                <div class="card text-white text-center border-warning h-50">
+                    <div class="card-body bg-success h-50" id="demo">
+                        <h1 id="limelight-check" class="card-title h-50" style="font-size: 100%;">
                             LIMELIGHT
                         </h1>
                     </div>
                 </div>
             </div>
             <div class="col-3">
-                <div class="card border-primary bg-dark h-100">
-                    <div class="row mx-2 px-0">
+                <div class="card border-primary bg-dark h-50">
+                    <div class="row">
                         <div class="col-6">
-                        <div class="dropdown" id="mardown">
-                            <button class="btn btn-secondary dropdown-toggle w-100" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <div class="dropdown-1 mt-1" id="mardown">
+                            <button class="btn mt-0 btn-secondary dropdown-toggle w-100 h-100" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                             Shmexy Dropdown
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" id="auto-select">
@@ -60,8 +51,8 @@
                         </div>
                         </div>
                         <div class="col-6">
-                            <div class="card border-warning text-center" id="droppy">
-                                <button class="btn btn-dark btn-lg btn-block w-100 mx-0" onclick="startLock()">
+                            <div class="card-1 border-warning text-center mt-0" id="droppy">
+                                <button class="btn btn-dark btn-lg btn-block w-100 mx-0 h-100" onclick="startLock()" style="font-size: 100%;">
                                     Drive Mode
                                 </button>
                             </div>
@@ -70,7 +61,7 @@
                 </div>
             </div>
             <div class="col-4">
-                <div class="card-group">
+                <div class="card-group h-50">
                     <div class="card text-white text-center border-primary bg-dark h-100">
                         <div class="card-body" id="demo">
                             <div id="drive-input">
