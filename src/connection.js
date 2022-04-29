@@ -15,7 +15,9 @@ NetworkTables.addRobotConnectionListener(onRobotConnection, false);
 
 // Function for hiding the connect box
 onkeydown = key => {
+  console.log('key');
   if (key.key === 'Escape') {
+    console.log('something');
     document.body.classList.toggle('login', false);
     loginShown = false;
   }

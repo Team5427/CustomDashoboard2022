@@ -109,18 +109,18 @@ function updateJoy() {
 
 }
 
-function printButton(value) {
-  var autoSelect = document.getElementById('auto-select');
-  while (autoSelect.firstChild) {
-    autoSelect.removeChild(autoSelect.firstChild);
-  }
-  // Make an option for each autonomous mode and put it in the selector
-  for (let i = 0; i < value.length; i++) {
-    var option = document.createElement('li');
-    option.appendChild(document.createTextNode(value));
-    autoSelect.appendChild(option);
-  }
-}
+// function printButton(value) {
+//   var autoSelect = document.getElementById('auto-select');
+//   while (autoSelect.firstChild) {
+//     autoSelect.removeChild(autoSelect.firstChild);
+//   }
+//   // Make an option for each autonomous mode and put it in the selector
+//   for (let i = 0; i < value.length; i++) {
+//     var option = document.createElement('li');
+//     option.appendChild(document.createTextNode(value));
+//     autoSelect.appendChild(option);
+//   }
+// }
 
 document.body.requestPointerLock = document.body.requestPointerLock ||
   document.body.mozRequestPointerLock;
@@ -131,12 +131,10 @@ document.exitPointerLock = document.exitPointerLock ||
 
 function startLock() {
   document.body.requestPointerLock();
-  document.getElementsByTagName().style.background = "#181818";
 }
 
 function endLock(event) {
   document.exitPointerLock();
-  document.getElementsByTagName().style.background = "#2c2c2c";
 
 }
 
