@@ -9,13 +9,14 @@ let back = false;
 let left = false;
 let right = false;
 let sprint = false;
+let driveMode = false;
 var x = 0.00;
 var y = 0.00;
 var z = 0.00;
 const kMouseDivisor = 60;
 
 onkeydown = key => {
-  if (key.key == 'r') {
+  if (key.key == 'j') {
     sprint = true;
   }
 
@@ -45,7 +46,7 @@ onkeydown = key => {
 };
 
 onkeyup = key => {
-  if (key.key == 'r') {
+  if (key.key == 'j') {
     sprint = false;
   }
 
@@ -80,7 +81,7 @@ onmousemove = event => {
 function updateJoy() {
   x = 0;
   y = 0;
-  var speed = .50;
+  var speed = 1;
 
   if (sprint) {
     speed = .70;
@@ -97,6 +98,12 @@ function updateJoy() {
   }
   if (!left && right) {
     x = speed;
+  }
+
+  if (!driveMode) {
+    x = 0.00;
+    y = 0.00;
+    z = 0.00;
   }
 
   driveInput.xAxis.textContent = x.toFixed(2);
@@ -131,10 +138,12 @@ document.exitPointerLock = document.exitPointerLock ||
 
 function startLock() {
   document.body.requestPointerLock();
+  driveMode = true;
 }
 
 function endLock(event) {
   document.exitPointerLock();
+  driveMode = false;
 
 }
 
