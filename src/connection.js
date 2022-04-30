@@ -3,20 +3,19 @@ let address = document.getElementById('connect-address'),
   buttonConnect = document.getElementById('connect-button');
 
 let loginShown = true;
+let addVal = 'IP (10.TE.AM.02)'
 
 // Set function to be called on NetworkTables connect. Not implemented.
 //NetworkTables.addWsConnectionListener(onNetworkTablesConnection, true);
 
 // Set function to be called when robot dis/connects
-NetworkTables.addRobotConnectionListener(onRobotConnection, false);
-console.log('something');
+NetworkTables.addRobotConnectionListener(onRobotConnection, true);
 
 // Sets function to be called when any NetworkTables key/value changes
 //NetworkTables.addGlobalListener(onValueChanged, true);
 
 // Function for hiding the connect box
 onkeydown = key => {
-  console.log('bru');
   if (key.key === 'Escape') {
     document.body.classList.toggle('login', false);
     loginShown = false;
@@ -37,13 +36,17 @@ buttonConnect.onclick = () => {
 function onRobotConnection(connected) {
   var state = connected ? 'Robot connected!' : 'Robot disconnected.';
   console.log(state);
-  ui.robotState.textContent = state;
+  // ui.robotState.textContent = state;
   
   if (connected) {
+    document.getElementById('connect-button').classList.remove('bg-danger');
+    document.getElementById('connect-button').classList.add('bg-success');
     // On connect hide the connect popup
     document.body.classList.toggle('login', false);
     loginShown = false;
   } else if (loginShown) {
+    document.getElementById('connect-button').classList.remove('bg-success');
+    document.getElementById('connect-button').classList.add('bg-danger');
     setLogin();
   }
 }
@@ -53,13 +56,14 @@ function setLogin() {
   address.disabled = connect.disabled = false;
   connect.textContent = 'Connect';
   // Add the default address and select xxxx
-  address.value = 'roborio-5427-frc.local';
+  address.value = addVal;
   address.focus();
-  address.setSelectionRange(8, 12);
+  // address.setSelectionRange(8, 12);
 }
 // On click try to connect and disable the input and the button
 connect.onclick = () => {
   ipc.send('connect', address.value);
+  addVal = address.value;
   address.disabled = connect.disabled = true;
   connect.textContent = 'Connecting...';
 };

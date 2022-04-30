@@ -5,6 +5,7 @@ let driveInput = {
 };
 
 const driveBtn = document.getElementById('drive-button');
+const limeBtn = document.getElementById('limelight-check');
 
 let forward = false;
 let back = false;
@@ -76,7 +77,7 @@ onmousemove = event => {
   else {
     z = event.movementX / kMouseDivisor;
   }
-
+  limeCheck();
   updateJoy();
 };
 
@@ -147,6 +148,24 @@ function endLock(event) {
   document.exitPointerLock();
   driveMode = false;
 
+}
+
+function limeAlert() {
+  if (NetworkTables.getValue('/limelight/tv', 2) == 2) {
+    alert('limelight not connected');
+  } else {
+    alert('limelight connected');
+  }
+}
+
+function limeCheck() {
+  if (NetworkTables.getValue('/limelight/tv', 2) == 2) {
+    limeBtn.classList.remove('bg-success');
+    limeBtn.classList.add('bg-danger');
+  } else {
+    limeBtn.classList.add('bg-danger');
+    limeBtn.classList.remove('bg-success');
+  }
 }
 
 

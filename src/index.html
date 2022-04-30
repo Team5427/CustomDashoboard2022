@@ -27,18 +27,18 @@
                 </div>
             </div>
             <div class="col-2">
-                <div class="card border-warning text-center h-100">
-                    <button class="btn btn-dark btn-lg btn-block h-100 w-100 mx-0" id="connect-button">
-                        <h3 style="padding-top:3px">
+                <div class="card text-white text-center border-primary h-100">
+                    <div class="card-body bg-success h-100" id="connect-button">
+                        <h1 class="card-title h-100" style="padding-top:3px">
                             CONNECT
-                        </h3>
-                    </button>
+                        </h1>
+                    </div>
                 </div>
             </div>
             <div class="col-2">
-                <div class="card text-white text-center border-warning h-100">
-                    <div class="card-body bg-success h-100" id="demo">
-                        <h1 id="limelight-check" class="card-title h-100" style="padding-top:3px">
+                <div class="card text-white text-center border-primary h-100" onclick="limeAlert()">
+                    <div class="card-body bg-success h-100" id="limelight-check">
+                        <h1 class="card-title h-100" style="padding-top:3px">
                             LIMELIGHT
                         </h1>
                     </div>
@@ -46,18 +46,13 @@
             </div>
             <div class="col-3">
                 <div class="card border-primary bg-dark h-100">
-                    <div class="row mx-4">
+                    <div class="row mx-2">
                         <div class="col-6">
-                        <div class="dropdown h-100" id="mardown">
-                            <button class="btn btn mt-0 btn-secondary dropdown-toggle w-100" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                            Shmexy Dropdown
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" id="auto-select">
-                                <li><a class="dropdown-item">bruh</a></li>
-                                <li><a class="dropdown-item">LLL</a></li>
-                                <li><a class="dropdown-item">oof</a></li>
-                            </ul>
-                        </div>
+                            <div class="card border-warning text-center" id="droppy">
+                                <button class="btn btn-dark btn-lg btn-block w-100 mt-0 h-100" id="chooser-button">
+                                    Auton Chooser
+                                </button>
+                            </div>
                         </div>
                         <div class="col-6">
                             <div class="card border-warning text-center" id="droppy">
@@ -100,7 +95,7 @@
         </div>
         <div class="row my-4">
             <div class="col-4">
-                <div class="card text-white border-info bg-dark">
+                <div class="card text-white border-primary bg-dark">
                     <img src="../images/images.png" alt="field gone?" height="100%" width="100%">             
                 </div>
                 <div class="card text-white text-center border-primary bg-dark my-4">
@@ -112,7 +107,7 @@
                     <img src="../images/2022-field.png" class="card-img-bottom" alt="stoppedexisting">
                 </div>
                 <div class="card-group">
-                    <div class="card text-white text-center border-warning bg-danger h-100">
+                    <div class="card text-white text-center border-primary bg-danger h-100">
                         <div class="card-body">
                             <div id="can-shoot">
                                 <h5 class="card-title py-2" style="margin-top:7px"><b>SHOOT READY</b></h5>
@@ -180,9 +175,13 @@
             <input id="connect-address" type="text" value="localhost" disabled>
             <button id="connect" disabled>Connecting</button>
         </div>
+        <div id="chooser">
+            <button class="btn btn-primary btn-lg" id="choice-one">Large button</button>
+        </div>
     </div>
 
     <script src="networktables/networktables.js"></script>
+    <script src="chooser.js"></script>
     <script src="ui.js"></script>
     <script src="connection.js"></script>
     <script src="bru.js"></script>

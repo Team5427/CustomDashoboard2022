@@ -55,7 +55,7 @@ let ui = {
 
 // This button is just an example of triggering an event on the robot by clicking a button.
 NetworkTables.addKeyListener('/SmartDashboard/x/Shooter RPM', (key, value) => {
-    ui.shooterRPM.textContent = value;
+    ui.shooterRPM.textContent = 'RPM :' + value;
 });
 
 NetworkTables.addKeyListener('/robot/time', (key, value) => {
@@ -80,15 +80,15 @@ NetworkTables.addKeyListener('/robot/time', (key, value) => {
 //     ui.autoSelect.value = NetworkTables.getValue('/SmartDashboard/currentlySelectedMode');
 // });
 
-// Load list of prewritten autonomous modes
+// // Load previously selected mode
 // NetworkTables.addKeyListener('/SmartDashboard/autonomous/selected', (key, value) => {
 //     ui.autoSelect.value = value;
 // });
 
 NetworkTables.addKeyListener('/SmartDashboard/CAN SHOOT???', (key, value) => {
-    if(value){
+    if(value) {
         canShoot.className = "card text-white bg-success h-100";
-    } else{
+    } else {
         canShoot.className = "card text-white bg-danger h-100";
     }
 });
