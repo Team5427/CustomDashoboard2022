@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <title>5427 Steel Talons</title>
     <link href="css/style.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <style>
         .newClass {
             cursor: none;
@@ -20,7 +21,8 @@
             <div class="col-2">
                 <div class="card text-white text-center border-primary bg-dark h-50">
                     <div class="card-body-1 mt-0" id="demo">
-                        <button id="connect" class="btn btn-dark btn-lg btn-block w-100 mx-0 h-100" style="font-size: 100%;">
+                        <button id="connect" class="btn btn-dark btn-lg btn-block w-100 mt-1 mb-4 h-50"
+                            style="font-size: 90%;">
                             Connect
                         </button>
                     </div>
@@ -29,7 +31,7 @@
             <div class="col-2">
                 <div class="card text-white text-center border-warning h-50">
                     <div class="card-body bg-success h-50" id="demo">
-                        <h1 id="limelight-check" class="card-title h-50" style="font-size: 100%;">
+                        <h1 id="limelight-check" class="card-title h-50" style="font-size: 90%;">
                             LIMELIGHT
                         </h1>
                     </div>
@@ -39,20 +41,23 @@
                 <div class="card border-primary bg-dark h-50">
                     <div class="row">
                         <div class="col-6">
-                        <div class="dropdown-1 mt-1" id="mardown">
-                            <button class="btn mt-0 btn-secondary dropdown-toggle w-100 h-100" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                            Shmexy Dropdown
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" id="auto-select">
-                                <li><a class="dropdown-item">bruh</a></li>
-                                <li><a class="dropdown-item">LLL</a></li>
-                                <li><a class="dropdown-item">oof</a></li>
-                            </ul>
-                        </div>
+                            <div class="dropdown-1 mt-0" id="mardown">
+                                <button class="btn btn-secondary dropdown-toggle w-100 h-100 mt-1 mx-1" type="button"
+                                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"
+                                    style="font-size: 90%;">
+                                    Shmexy Dropdown
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" id="auto-select">
+                                    <li><a class="dropdown-item">bruh</a></li>
+                                    <li><a class="dropdown-item">LLL</a></li>
+                                    <li><a class="dropdown-item">oof</a></li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="col-6">
                             <div class="card-1 border-warning text-center mt-0" id="droppy">
-                                <button class="btn btn-dark btn-lg btn-block w-100 mx-0 h-100" onclick="startLock()" style="font-size: 100%;">
+                                <button class="btn mb-5 btn-dark btn-lg btn-block w-100 h-100" onclick="startLock()"
+                                    style="font-size: 90%;">
                                     Drive Mode
                                 </button>
                             </div>
@@ -65,134 +70,153 @@
                     <div class="card text-white text-center border-primary bg-dark h-100">
                         <div class="card-body" id="demo">
                             <div id="drive-input">
-                                <h5 class="card-title">X Input</h5>
-                                <p id="x-axis" class="card-text">0.00</p>
+                                <div class="row">
+                                    <div class="col">
+                                        <h5 class="card-title h-100" style="font-size: 90%;">X Input</h5>
+                                    </div>
+                                    <div class="col">
+                                        <p id="x-axis" class="card-text h-100" style="font-size: 90%;">0.00</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="card text-white text-center border-primary bg-dark h-100">
                         <div class="card-body" id="demo">
                             <div id="drive-input">
-                                <h5 class="card-title">Y Input</h5>
-                                <p id="y-axis" class="card-text">0.00</p>
+                                <div class="row">
+                                    <div class="col">
+                                        <h5 class="card-title h-100" style="font-size: 90%;">Y Input</h5>
+                                    </div>
+                                    <div class="col">
+                                        <p id="y-axis" class="card-text h-100" style="font-size: 90%;">0.00</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="card text-white text-center border-primary bg-dark h-100">
                         <div class="card-body" id="demo">
                             <div id="drive-input">
-                                <h5 class="card-title">Z Input</h5>
-                                <p id="z-axis" class="card-text">0.00</p>
+                                <div class="row">
+                                    <div class="col">
+                                        <h5 class="card-title h-100" style="font-size: 90%;">Z Input</h5>
+                                    </div>
+                                    <div class="col">
+                                        <p id="z-axis" class="card-text h-100" style="font-size: 90%;">0.00</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row my-4">
-            <div class="col-4">
-                <div class="card text-white border-info bg-dark">
-                    <img src="../images/images.png" alt="field gone?" height="100%" width="100%">             
-                </div>
-                <div class="card text-white text-center border-primary bg-dark my-4">
-                    <div class="card-body">
-                      <h3 class="card-title" style="display:inline;"><b>X</b> : 0.00</h3>
-                      <h3 class="card-title px-5" style="display:inline;"><b>Y</b> : 0.00</h3>
-                      <h3 class="card-title" style="display:inline;"><b>θ</b> : 0.00</h3>
+            <div class="row my-4">
+                <div class="col-4">
+                    <div class="card text-white border-info bg-dark">
+                        <img src="../images/images.png" alt="field gone?" height="100%" width="100%">
                     </div>
-                    <img src="../images/2022-field.png" class="card-img-bottom" alt="stoppedexisting">
-                </div>
-                <div class="card-group">
-                    <div class="card text-white text-center border-warning bg-danger h-100">
+                    <div class="card text-white text-center border-primary bg-dark my-4">
                         <div class="card-body">
-                            <div id="can-shoot">
-                                <h5 class="card-title py-2" style="margin-top:7px"><b>SHOOT READY</b></h5>
+                            <h3 class="card-title" style="display:inline;"><b>X</b> : 0.00</h3>
+                            <h3 class="card-title px-5" style="display:inline;"><b>Y</b> : 0.00</h3>
+                            <h3 class="card-title" style="display:inline;"><b>θ</b> : 0.00</h3>
+                        </div>
+                        <img src="../images/2022-field.png" class="card-img-bottom" alt="stoppedexisting">
+                    </div>
+                    <div class="card-group">
+                        <div class="card text-white text-center border-warning bg-danger h-100">
+                            <div class="card-body">
+                                <div id="can-shoot">
+                                    <h5 class="card-title py-2" style="margin-top:7px"><b>SHOOT READY</b></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card text-white text-center border-primary bg-dark h-100">
+                            <div class="card-body">
+                                <div id="pitch">
+                                    <h5 class="card-title py-2" style="margin-top:7px"><b>RPM</b> : 0.00</h5>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="card text-white text-center border-primary bg-dark h-100">
-                        <div class="card-body">
-                            <div id="pitch">
-                                <h5 class="card-title py-2" style="margin-top:7px"><b>RPM</b> : 0.00</h5>
+                </div>
+                <div class="col-8">
+                    <div class="card text-white border-primary bg-dark">
+                        <img src="../images/images.png" alt="field gone?" height="100%" width="100%">
+                    </div>
+                    <div class="row my-4">
+                        <div class="col-3">
+                            <div class="card text-white text-center border-primary bg-dark h-100">
+                                <div class="card-body" id="">
+                                    <div id="tobefilledout">
+                                        <h2 class="card-title">Pitch</h2>
+                                        <h5 id="" class="card-text">0.00</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="card text-white text-center border-primary bg-dark h-100">
+                                <div class="card-body" id="">
+                                    <div id="tobefilledout">
+                                        <h2 class="card-title">Balls</h2>
+                                        <h5 id="" class="card-text">0.00</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="card text-white text-center border-primary bg-dark h-100">
+                                <div class="card-body" id="">
+                                    <div id="tobefilledout">
+                                        <h2 class="card-title">Battery</h2>
+                                        <h5 id="" class="card-text">0.00 V</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="card text-white text-center border-primary bg-dark h-100">
+                                <div class="card-body" id="">
+                                    <div id="tobefilledout">
+                                        <h2 class="card-title">PC</h2>
+                                        <h5 id="" class="card-text">0.00 %</h5>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-8">
-                <div class="card text-white border-primary bg-dark">
-                    <img src="../images/images.png" alt="field gone?" height="100%" width="100%">             
-                </div>
-                <div class="row my-4">
-                    <div class="col-3">
-                        <div class="card text-white text-center border-primary bg-dark h-100">
-                            <div class="card-body" id="">
-                                <div id="tobefilledout">
-                                    <h2 class="card-title">Pitch</h2>
-                                    <h5 id="" class="card-text">0.00</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card text-white text-center border-primary bg-dark h-100">
-                            <div class="card-body" id="">
-                                <div id="tobefilledout">
-                                    <h2 class="card-title">Balls</h2>
-                                    <h5 id="" class="card-text">0.00</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card text-white text-center border-primary bg-dark h-100">
-                            <div class="card-body" id="">
-                                <div id="tobefilledout">
-                                    <h2 class="card-title">Battery</h2>
-                                    <h5 id="" class="card-text">0.00 V</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card text-white text-center border-primary bg-dark h-100">
-                            <div class="card-body" id="">
-                                <div id="tobefilledout">
-                                    <h2 class="card-title">PC</h2>
-                                    <h5 id="" class="card-text">0.00 %</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- <div id="login">
+            <!-- <div id="login">
             <input id="connect-address" type="text" value="localhost" disabled>
             <button id="connect" disabled>Connecting</button>
         </div>
         <button id="connect-button">Connect</button> -->
-    </div>
+        </div>
 
-    <script src="networktables/networktables.js"></script>
-    <script src="ui.js"></script>
-    <script src="connection.js"></script>
-    <script src="bru.js"></script>
-    <script src="../node_modules/@frc-web-components/frc-web-components/build/frc-web-components.min.js"></script>
-    <script>
-        webbitStore.addSourceProvider('NetworkTables');
-        webbitStore.setDefaultSourceProvider('NetworkTables');
-    </script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script>
-        function GFG_Fun() {
-            body.classList.add("newClass");
-            // down.innerHTML = "Cursor is removed from body!"; 
-        }
-    </script>
+        <script src="networktables/networktables.js"></script>
+        <script src="ui.js"></script>
+        <script src="connection.js"></script>
+        <script src="bru.js"></script>
+        <script src="../node_modules/@frc-web-components/frc-web-components/build/frc-web-components.min.js"></script>
+        <script>
+            webbitStore.addSourceProvider('NetworkTables');
+            webbitStore.setDefaultSourceProvider('NetworkTables');
+        </script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+        <script>
+            function GFG_Fun() {
+                body.classList.add("newClass");
+                // down.innerHTML = "Cursor is removed from body!"; 
+            }
+        </script>
 </body>
 
 </html>
