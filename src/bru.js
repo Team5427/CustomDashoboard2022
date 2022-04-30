@@ -4,6 +4,8 @@ let driveInput = {
   zAxis: document.getElementById('z-axis')
 };
 
+const driveBtn = document.getElementById('drive-button');
+
 let forward = false;
 let back = false;
 let left = false;
@@ -15,7 +17,7 @@ var y = 0.00;
 var z = 0.00;
 const kMouseDivisor = 60;
 
-onkeydown = key => {
+driveBtn.onkeydown = key => {
   if (key.key == 'j') {
     sprint = true;
   }
@@ -45,7 +47,7 @@ onkeydown = key => {
   // } 
 };
 
-onkeyup = key => {
+driveBtn.onkeyup = key => {
   if (key.key == 'j') {
     sprint = false;
   }
@@ -110,9 +112,9 @@ function updateJoy() {
   driveInput.yAxis.textContent = y.toFixed(2);
   driveInput.zAxis.textContent = z.toFixed(2);
 
-  NetworkTables.putValue('/SmartDashboard/drive/x', x);
-  NetworkTables.putValue('/SmartDashboard/drive/y', y);
-  NetworkTables.putValue('/SmartDashboard/drive/z', z);
+  NetworkTables.putValue('/SmartDashboard/x', x);
+  NetworkTables.putValue('/SmartDashboard/y', y);
+  NetworkTables.putValue('/SmartDashboard/z', z);
 
 }
 

@@ -20,15 +20,15 @@
             <div class="col-1">
                 <div class="card text-white text-center border-primary bg-dark h-100">
                     <div class="card-body" id="">
-                        <div id="timer">
-                            <h1 class="card-title" style="padding-top:3px">2:15</h1>
+                        <div>
+                            <h1 class="card-title" style="padding-top:3px" id="timer">2:15</h1>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-2">
                 <div class="card border-warning text-center h-100">
-                    <button class="btn btn-dark btn-lg btn-block h-100 w-100 mx-0" id="connect">
+                    <button class="btn btn-dark btn-lg btn-block h-100 w-100 mx-0" id="connect-button">
                         <h3 style="padding-top:3px">
                             CONNECT
                         </h3>
@@ -61,7 +61,7 @@
                         </div>
                         <div class="col-6">
                             <div class="card border-warning text-center" id="droppy">
-                                <button class="btn btn-dark btn-lg btn-block w-100 mx-0 h-100" onclick="startLock()">
+                                <button class="btn btn-dark btn-lg btn-block w-100 mx-0 h-100" onclick="startLock()" id="drive-button">
                                     Drive Mode
                                 </button>
                             </div>
@@ -176,11 +176,10 @@
                 </div>
             </div>
         </div>
-        <!-- <div id="login">
+        <div id="login">
             <input id="connect-address" type="text" value="localhost" disabled>
             <button id="connect" disabled>Connecting</button>
         </div>
-        <button id="connect-button">Connect</button> -->
     </div>
 
     <script src="networktables/networktables.js"></script>

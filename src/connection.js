@@ -9,15 +9,15 @@ let loginShown = true;
 
 // Set function to be called when robot dis/connects
 NetworkTables.addRobotConnectionListener(onRobotConnection, false);
+console.log('something');
 
 // Sets function to be called when any NetworkTables key/value changes
 //NetworkTables.addGlobalListener(onValueChanged, true);
 
 // Function for hiding the connect box
 onkeydown = key => {
-  console.log('key');
+  console.log('bru');
   if (key.key === 'Escape') {
-    console.log('something');
     document.body.classList.toggle('login', false);
     loginShown = false;
   }
