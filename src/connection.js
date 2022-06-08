@@ -3,7 +3,7 @@ let address = document.getElementById('connect-address'),
   buttonConnect = document.getElementById('connect-button');
 
 let loginShown = true;
-let addVal = 'IP (10.TE.AM.02)'
+let addVal = 'IP (10.54.27.2)'
 
 // Set function to be called on NetworkTables connect. Not implemented.
 //NetworkTables.addWsConnectionListener(onNetworkTablesConnection, true);

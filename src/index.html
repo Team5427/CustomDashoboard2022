@@ -16,78 +16,98 @@
 <body id="bod">
     <!-- <img src="../images/chicken.jpeg" alt="bruh" class="img-fluid"> -->
     <div class="container-fluid">
-        <div class="row mt-3">
+        <div class="row mt-3 mb-1">
             <div class="col-1">
-                <div class="card text-white text-center border-primary bg-dark h-100">
-                    <div class="card-body" id="">
-                        <div>
-                            <h1 class="card-title" style="padding-top:3px" id="timer">2:15</h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-2">
-                <div class="card text-white text-center border-primary h-100">
-                    <div class="card-body bg-success h-100" id="connect-button">
-                        <h1 class="card-title h-100" style="padding-top:3px">
+                <div class="card text-white text-center border-primary h-75">
+                    <div class="card-body bg-success h-75" id="connect-button">
+                        <h1 class="card-title h-50" style="font-size: 100%">
                             CONNECT
                         </h1>
                     </div>
                 </div>
             </div>
-            <div class="col-2">
-                <div class="card text-white text-center border-primary h-100" onclick="limeAlert()">
-                    <div class="card-body bg-success h-100" id="limelight-check">
-                        <h1 class="card-title h-100" style="padding-top:3px">
+            <div class="col-1">
+                <div class="card text-white text-center border-primary h-75" onclick="limeAlert()">
+                    <div class="card-body bg-success h-75" id="limelight-check">
+                        <h1 class="card-title h-100" style="font-size: 100%;">
                             LIMELIGHT
                         </h1>
                     </div>
                 </div>
             </div>
-            <div class="col-3">
-                <div class="card border-primary bg-dark h-100">
-                    <div class="row mx-2">
-                        <div class="col-6">
-                            <div class="card border-warning text-center" id="droppy">
-                                <button class="btn btn-dark btn-lg btn-block w-100 mt-0 h-100" id="chooser-button">
-                                    Auton Chooser
+            <div class="col-2">
+                <div class="card border-primary bg-dark h-75 mx-1">
+                    <div class="row mb-0">
+                        <div class="col-5 mx-3">
+                            <div class="card border-warning text-center mt-1 h-70" id="droppy">
+                                <button class="btn btn-dark btn-lg btn-block h-50" id="chooser-button" style="font-size: 90%;">
+                                    Auton
                                 </button>
                             </div>
                         </div>
-                        <div class="col-6">
-                            <div class="card border-warning text-center" id="droppy">
-                                <button class="btn btn-dark btn-lg btn-block w-100 mx-0 h-100" onclick="startLock()" id="drive-button">
-                                    Drive Mode
+                        <div class="col-5 mx-0">
+                            <div class="card border-warning text-center mt-1 h-70" id="droppy">
+                                <button class="btn btn-dark btn-lg btn-block mx h-50" onclick="startLock()" id="drive-button" style="font-size: 90%;">
+                                    Drive
                                 </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-4">
-                <div class="card-group h-100">
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <div class="card-group h-50">
                     <div class="card text-white text-center border-primary bg-dark h-100">
                         <div class="card-body" id="demo">
                             <div id="drive-input">
-                                <h5 class="card-title">X Input</h5>
-                                <p id="x-axis" class="card-text">0.00</p>
+                                <div class="row">
+                                    <div class="col">
+                                        <h5 class="card-title h-50 mb-5" style="font-size: 100%">X Axis</h5>
+                                    </div>
+                                    <div class="col">
+                                        <p id="x-axis" class="card-title h-50 mb-5" style="font-size: 100%">0.00</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="card text-white text-center border-primary bg-dark h-100">
                         <div class="card-body" id="demo">
                             <div id="drive-input">
-                                <h5 class="card-title">Y Input</h5>
-                                <p id="y-axis" class="card-text">0.00</p>
+                                <div class="row">
+                                    <div class="col">
+                                        <h5 class="card-title h-50 mb-5" style="font-size: 100%">Y Axis</h5>
+                                    </div>
+                                    <div class="col">
+                                        <p id="y-axis" class="card-title h-50 mb-5" style="font-size: 100%">0.00</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="card text-white text-center border-primary bg-dark h-100">
                         <div class="card-body" id="demo">
                             <div id="drive-input">
-                                <h5 class="card-title">Z Input</h5>
-                                <p id="z-axis" class="card-text">0.00</p>
+                                <div class="row">
+                                    <div class="col">
+                                        <h5 class="card-title h-50 mb-5" style="font-size: 100%">Z Axis</h5>
+                                    </div>
+                                    <div class="col">
+                                        <p id="z-axis" class="card-title h-50 mb-5" style="font-size: 100%">0.00</p>
+                                    </div>
+                                </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1">
+                <div class="card text-white text-center border-primary bg-danger h-50">
+                    <div class="card-body">
+                        <div id="can-shoot">
+                            <h1 class="card-title h-50" style="font-size: 100%">Shoot Ready</h1>
                         </div>
                     </div>
                 </div>
@@ -107,13 +127,7 @@
                     <img src="../images/2022-field.png" class="card-img-bottom" alt="stoppedexisting">
                 </div>
                 <div class="card-group">
-                    <div class="card text-white text-center border-primary bg-danger h-100">
-                        <div class="card-body">
-                            <div id="can-shoot">
-                                <h5 class="card-title py-2" style="margin-top:7px"><b>SHOOT READY</b></h5>
-                            </div>
-                        </div>
-                    </div>
+                    
                     <div class="card text-white text-center border-primary bg-dark h-100">
                         <div class="card-body">
                             <div id="pitch">
