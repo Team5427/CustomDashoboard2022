@@ -54,7 +54,7 @@ let ui = {
 // });
 
 // This button is just an example of triggering an event on the robot by clicking a button.
-NetworkTables.addKeyListener('/SmartDashboard/x/Shooter RPM', (key, value) => {
+NetworkTables.addKeyListener('/SmartDashboard/Yaw', (key, value) => {
     ui.shooterRPM.textContent = 'RPM :' + value;
 });
 
